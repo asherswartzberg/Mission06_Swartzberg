@@ -3,50 +3,81 @@
 *@
 @{
 }
-
 @model Movie
-<h1>Enter a Film</h1>
-<form method="post">
-    <label asp-for="Category">Category:</label>
-    <input asp-for="Category" />
-    <br />
-    <br />
-    <label asp-for="Title">Title:</label>
-    <input asp-for="Title"/>
-    <br />
-    <br />
-    <label asp-for="Year">Year:</label>
-    <input asp-for="Year" />
-    <br />
-    <br />
-    <label asp-for="Director">Director:</label>
-    <input asp-for="Director" />
-    <br />
-    <br />
-    <label asp-for="Rating">Rating:</label>
-    <select asp-for="Rating">
-        <option value="G">G</option>
-        <option value="PG">PG</option>
-        <option value="PG-13">PG-13</option>
-        <option value="R">R</option>
-        <option value="NR">NR</option>
-    </select>
-    <br />
-    <br />
-    <label asp-for="Edited">Edited:</label>
-    <input asp-for="Edited" type="radio" id="no" value="false" />
-    <label asp-for="Edited" for="no">No</label>
-    <input asp-for="Edited" type="radio" id="yes" value="true" />
-    <label asp-for="Edited" for="yes">Yes</label>
-    <br />
-    <br />
-    <label asp-for="LentTo">Lent To:</label>
-    <input asp-for="LentTo" />
-    <br />
-    <br />
-    <label asp-for="Notes">Notes:</label>
-    <input asp-for="Notes" maxlength="25" />
-    <br />
-    <br />
-    <button type="submit">Submit Film</button>
-</form>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+
+            <div class="card shadow">
+                <div class="card-header bg-danger text-white">
+                    <h1 class="h3 mb-0">🎬 Enter a Film</h1>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+
+                        <div class="mb-3">
+                            <label asp-for="Category" class="form-label fw-semibold">Category:</label>
+                            <input asp-for="Category" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label fw-semibold">Title:</label>
+                            <input asp-for="Title" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Year" class="form-label fw-semibold">Year:</label>
+                            <input asp-for="Year" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Director" class="form-label fw-semibold">Director:</label>
+                            <input asp-for="Director" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Rating" class="form-label fw-semibold">Rating:</label>
+                            <select asp-for="Rating" class="form-select">
+                                <option value="G">G</option>
+                                <option value="PG">PG</option>
+                                <option value="PG-13">PG-13</option>
+                                <option value="R">R</option>
+                                <option value="NR">NR</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold d-block">Edited:</label>
+                            <div class="form-check form-check-inline">
+                                <input asp-for="Edited" type="radio" id="no" value="false" class="form-check-input" />
+                                <label class="form-check-label" for="no">No</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input asp-for="Edited" type="radio" id="yes" value="true" class="form-check-input" />
+                                <label class="form-check-label" for="yes">Yes</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="LentTo" class="form-label fw-semibold">Lent To:</label>
+                            <input asp-for="LentTo" class="form-control" />
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Notes" class="form-label fw-semibold">Notes:</label>
+                            <input asp-for="Notes" maxlength="25" class="form-control" />
+                            <div class="form-text">Maximum 25 characters.</div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-danger btn-lg">➕ Submit Film</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -2,13 +2,23 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to The Joel Hilton Film Collection</h1>
-    <img src="~/img/joelhiltonheadshot.jpg" />
-</div>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
 
-<div class="text-center">
-    <a asp-controller="Home" asp-action="GetToKnow">Learn more about Joel Hilton.</a>
-    <br />
-    <a asp-controller="Home" asp-action="MovieForm">Add a film to the collection.</a>
+            <h1 class="display-4 fw-bold mb-4">Welcome to The Joel Hilton Film Collection</h1>
+
+            <img src="~/img/joelhiltonheadshot.jpg" class="img-fluid rounded-circle shadow mb-4" style="max-width: 300px;" alt="Joel Hilton" />
+
+            <div class="d-flex justify-content-center gap-3 mt-2">
+                <a asp-controller="Home" asp-action="GetToKnow" class="btn btn-outline-primary btn-lg">
+                    🎬 Learn More About Joel
+                </a>
+                <a asp-controller="Home" asp-action="MovieForm" class="btn btn-danger btn-lg">
+                    ➕ Add a Film
+                </a>
+            </div>
+
+        </div>
+    </div>
 </div>
