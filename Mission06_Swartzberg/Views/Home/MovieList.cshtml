@@ -36,7 +36,14 @@
                             <td class="fw-semibold">@x.Title</td>
                             <td>@x.Year</td>
                             <td>@x.Director</td>
-                            <td>@x.Category.CategoryName</td>
+                            @if (x.CategoryId != null)
+                            {
+                                <td>@x.Category.CategoryName</td>
+                            }
+                            else
+                            {
+                                <td></td>
+                            }
                             <td><span class="badge bg-secondary">@x.Rating</span></td>
                             <td>
                                 @if (x.Edited)
