@@ -19,7 +19,7 @@ namespace Mission06_Swartzberg.Models
         public string? Rating { get; set; }
         public bool Edited { get; set; }
         public string? LentTo { get; set; }
-        public bool? CopiedToPlex { get; set; }
+        public bool CopiedToPlex { get; set; }
         [MaxLength(25)]
         public string? Notes { get; set; }
 

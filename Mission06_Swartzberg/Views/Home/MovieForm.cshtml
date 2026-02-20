@@ -31,12 +31,12 @@
 
                         <div class="mb-3">
                             <label asp-for="Title" class="form-label fw-semibold">Title:</label>
-                            <input asp-for="Title" class="form-control" />
+                            <input asp-for="Title" class="form-control" required />
                         </div>
 
                         <div class="mb-3">
                             <label asp-for="Year" class="form-label fw-semibold">Year:</label>
-                            <input asp-for="Year" class="form-control" />
+                            <input asp-for="Year" class="form-control" required min="1888" max="2026" />
                         </div>
 
                         <div class="mb-3">
@@ -58,7 +58,7 @@
                         <div class="mb-3">
                             <label class="form-label fw-semibold d-block">Edited:</label>
                             <div class="form-check form-check-inline">
-                                <input asp-for="Edited" type="radio" id="no" value="false" class="form-check-input" />
+                                <input asp-for="Edited" type="radio" id="no" value="false" class="form-check-input" checked />
                                 <label class="form-check-label" for="no">No</label>
                             </div>
                             <div class="form-check form-check-inline">
@@ -72,6 +72,18 @@
                             <input asp-for="LentTo" class="form-control" />
                         </div>
 
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold d-block">Copied to Plex:</label>
+                            <div class="form-check form-check-inline">
+                                <input asp-for="CopiedToPlex" type="radio" id="no" value="false" class="form-check-input" checked />
+                                <label class="form-check-label" for="no">No</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input asp-for="CopiedToPlex" type="radio" id="yes" value="true" class="form-check-input" />
+                                <label class="form-check-label" for="yes">Yes</label>
+                            </div>
+                        </div>
+
                         <div class="mb-4">
                             <label asp-for="Notes" class="form-label fw-semibold">Notes:</label>
                             <input asp-for="Notes" maxlength="25" class="form-control" />
@@ -80,6 +92,9 @@
 
                         <div class="d-grid">
                             <button type="submit" class="btn btn-danger btn-lg">➕ Submit Film</button>
+                            <a asp-controller="Home" asp-action="MovieList" class="btn btn-outline-primary btn-lg">
+                                Cancel
+                            </a>
                         </div>
 
                         <div asp-validation-summary="All"></div>
