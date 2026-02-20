@@ -8,7 +8,7 @@ using Mission06_Swartzberg.Models;
 
 namespace Mission06_Swartzberg.Migrations
 {
-    [DbContext(typeof(FilmCollectionContext))]
+    [DbContext(typeof(JoelHiltonMovieCollectionContext))]
     partial class FilmCollectionContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

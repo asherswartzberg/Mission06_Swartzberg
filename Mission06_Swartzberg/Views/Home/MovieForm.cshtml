@@ -16,9 +16,17 @@
                 <div class="card-body">
                     <form method="post">
 
+                        <input type="hidden" asp-for="MovieId" />
+
                         <div class="mb-3">
-                            <label asp-for="Category" class="form-label fw-semibold">Category:</label>
-                            <input asp-for="Category" class="form-control" />
+                            <label asp-for="CategoryId" class="form-label fw-semibold">Category:</label>
+                            <select asp-for="CategoryId" class="form-select">
+                                <option>Select a Category</option>
+                                @foreach (Category c in ViewBag.Categories)
+                                {
+                                    <option value="@c.CategoryId">@c.CategoryName</option>
+                                }
+                            </select>
                         </div>
 
                         <div class="mb-3">
@@ -73,6 +81,8 @@
                         <div class="d-grid">
                             <button type="submit" class="btn btn-danger btn-lg">➕ Submit Film</button>
                         </div>
+
+                        <div asp-validation-summary="All"></div>
 
                     </form>
                 </div>

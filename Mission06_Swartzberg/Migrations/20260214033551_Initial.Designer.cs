@@ -9,7 +9,7 @@ using Mission06_Swartzberg.Models;
 
 namespace Mission06_Swartzberg.Migrations
 {
-    [DbContext(typeof(FilmCollectionContext))]
+    [DbContext(typeof(JoelHiltonMovieCollectionContext))]
     [Migration("20260214033551_Initial")]
     partial class Initial
     {
